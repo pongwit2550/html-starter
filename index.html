@@ -1,96 +1,238 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
-</html>
+<!DOCTYPE html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>โครงสร้างข้อมูลและอัลกอริทึม</title><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;800&display=swap" rel="stylesheet"><style>
+:root{--bg:#eaf1f6;--grid:rgba(20,50,90,.07);--fg:#14213d;--card:#fff;--mut:#5b6b82;--ac:#0e8f7e;--onac:#fff;--ink:#14213d;--sd:#14213d;--bd:#cdd9e5;--ok:#0e9f6e;--no:#e5484d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0b1624;--grid:rgba(120,170,230,.08);--fg:#e6eef7;--card:#12233a;--mut:#93a6bd;--ac:#2dd4bf;--onac:#04201c;--ink:#6f9bc7;--sd:#02070d;--bd:#25405e;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#0b1624;--grid:rgba(120,170,230,.08);--fg:#e6eef7;--card:#12233a;--mut:#93a6bd;--ac:#2dd4bf;--onac:#04201c;--ink:#6f9bc7;--sd:#02070d;--bd:#25405e;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;color:var(--fg);font:400 16px/1.75 'Noto Sans Thai',system-ui,sans-serif;background:var(--bg) linear-gradient(var(--grid) 1px,transparent 1px) 0 0/24px 24px,linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/24px 24px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+main{max-width:900px;margin:auto;padding:14px 16px 70px}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--card);border:2px solid var(--ink);box-shadow:5px 5px 0 var(--sd);border-radius:10px;padding:22px}
+.hero h1{margin:0;font-size:clamp(1.5rem,5.5vw,2.2rem);font-weight:800;line-height:1.25}.hero p{margin:6px 0 14px;color:var(--mut)}
+.mini{width:150px;flex:none}.mini line{stroke:var(--ink);stroke-width:2}.mini circle{fill:var(--ac)}
+.steps{display:flex;gap:8px;flex-wrap:wrap;counter-reset:s}.steps span{counter-increment:s;font-size:.84rem;border:1.5px solid var(--ink);border-radius:99px;padding:1px 12px}.steps span::before{content:counter(s) ". ";font-weight:800;color:var(--ac)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;gap:8px;overflow-x:auto;padding:12px 4px;margin:6px 0;scrollbar-width:none;background:var(--bg)}
+nav button,.chip{flex:none;font:inherit;color:var(--fg);background:var(--card);border:1.5px solid var(--ink);border-radius:99px;padding:5px 14px;cursor:pointer;transition:background .2s,color .2s,transform .15s}
+nav button:hover,.chip:hover{transform:translateY(-2px)}nav button.on,.chip.on{background:var(--ink);color:var(--bg);font-weight:600}
+.chip{font-size:.84rem;padding:3px 12px}.chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.card{background:var(--card);border:2px solid var(--ink);box-shadow:5px 5px 0 var(--sd);border-radius:10px;padding:18px;margin:18px 0}
+h2{font-size:1.15rem;margin:0 0 12px;font-weight:800}
+.an{border-left:5px solid var(--ac);background:color-mix(in srgb,var(--ac) 10%,transparent);padding:9px 14px;border-radius:0 8px 8px 0;margin-bottom:12px}
+.nt{list-style:none;padding:0;margin:0}.nt li{position:relative;padding:6px 8px 6px 26px;border-radius:8px;transition:background .2s}.nt li:hover{background:color-mix(in srgb,var(--ac) 9%,transparent)}.nt li::before{content:"";position:absolute;left:8px;top:15px;width:8px;height:8px;background:var(--ac);transform:rotate(45deg)}
+table{width:100%;border-collapse:collapse;margin:14px 0 10px;font-size:.92rem}th,td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--bd)}th{color:var(--mut);font-weight:600;border-bottom:2px solid var(--ink)}td:first-child{font-weight:600}
+.tip{background:color-mix(in srgb,#f5a623 16%,transparent);border-radius:8px;padding:7px 12px;margin:6px 0;font-size:.92rem}
+#stage{min-height:210px;padding:14px;border-radius:8px;border:1.5px dashed var(--ink);background:var(--card) linear-gradient(var(--grid) 1px,transparent 1px) 0 0/20px 20px,linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/20px 20px;overflow-x:auto;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#stage div,#stage span,#stage i{transition:width .5s,height .55s cubic-bezier(.4,0,.2,1),background-color .35s,opacity .35s,color .3s}
+#stage circle{transition:fill .4s}#stage line{transition:stroke .4s,stroke-width .4s,opacity .4s}svg{width:100%;max-width:460px;color:var(--fg)}
+.pop{animation:pop .5s cubic-bezier(.34,1.56,.64,1) both;transform-box:fill-box;transform-origin:center}@keyframes pop{from{opacity:0;transform:scale(.4)}}
+.bars{display:flex;align-items:flex-end;gap:8px;height:160px;width:100%;max-width:460px}.bars div{flex:1;background-color:var(--ac);color:#fff;text-align:center;border-radius:6px 6px 0 0;font-size:.85rem;padding-top:3px}
+.cells{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}.cells div{min-width:50px;padding:8px 6px;text-align:center;border:1.5px solid var(--ink);background:var(--card);border-radius:8px;font-weight:600}.cells small{opacity:.65;font-weight:400}
+.gm{display:grid;grid-template-columns:repeat(5,42px);gap:4px}.gm i{font-style:normal;text-align:center;padding:5px 0;border:1.5px solid var(--ink);border-radius:6px;background:var(--card)}.gm i.hd{border:0;background:none;color:var(--mut);font-weight:600}
+.chain .row{display:flex;align-items:center;gap:6px;padding:4px 8px;border-radius:8px;transition:background .3s}.row.hi{background:color-mix(in srgb,#f5a623 30%,transparent)}.row b{width:24px;color:var(--mut)}.nd{background:var(--ac);color:#fff;padding:2px 12px;border-radius:6px}.ar{color:var(--mut);font-style:normal}
+.big{font-size:1.15rem;text-align:center;padding:8px}.bad{color:var(--no);font-weight:600}.good{color:var(--ok);font-weight:600}
+.cap{min-height:3.5em;margin-top:12px;padding:9px 14px;border-left:5px solid #f5a623;background:color-mix(in srgb,#f5a623 12%,transparent);border-radius:0 8px 8px 0}.fd{animation:fd .4s both}@keyframes fd{from{opacity:0;transform:translateY(6px)}}
+.ctl{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}input[type=range]{flex:1;min-width:130px;accent-color:var(--ac)}
+.b{font:inherit;color:var(--fg);background:var(--card);border:1.5px solid var(--ink);border-radius:8px;padding:6px 14px;cursor:pointer;transition:transform .15s,box-shadow .15s}.b:hover{transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--sd)}.b:active{transform:none;box-shadow:none}.b.p{background:var(--ac);color:var(--onac);border-color:var(--ink)}
+select{font:inherit;padding:4px 6px;border-radius:8px;border:1.5px solid var(--ink);background:var(--card);color:var(--fg)}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #f5a623;outline-offset:2px}
+pre{margin:0;background:#0f1b2d;color:#dbe7f5;padding:14px;border-radius:8px;overflow-x:auto;font:.84rem/1.65 ui-monospace,Menlo,Consolas,monospace}.k{color:#7dd3fc}.n{color:#fbbf24}.c{color:#6b8199}.s{color:#86efac}
+.q{padding:14px 0;border-top:1px solid var(--bd)}.q:first-child{border-top:0}.tag{font-size:.72rem;background:var(--bd);color:var(--fg);padding:2px 10px;border-radius:99px;margin-right:6px}.tag.l{background:var(--ink);color:var(--bg)}
+.opt{display:flex;gap:8px;align-items:center;padding:7px 12px;margin:6px 0;border:1.5px solid var(--bd);border-radius:8px;cursor:pointer;transition:background .25s,border-color .25s,transform .2s}.opt:hover{border-color:var(--ink);transform:translateX(3px)}.opt.ok{background:color-mix(in srgb,var(--ok) 20%,transparent);border-color:var(--ok)}.opt.no{background:color-mix(in srgb,var(--no) 18%,transparent);border-color:var(--no)}
+input[type=text]{font:inherit;padding:6px 10px;border:1.5px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--fg);width:min(100%,320px)}
+.ex{font-size:.9rem;color:var(--mut);margin-top:6px;animation:fd .4s both}#score{margin-left:8px;font-weight:800}
+@media(max-width:560px){.mini{display:none}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body><main><header class="hero"><div><h1>โครงสร้างข้อมูลและอัลกอริทึม</h1><p>ดูทีละขั้น เทียบหลายกรณี แล้วทดสอบตัวเอง (กดปุ่ม ← → เพื่อเดินหน้า/ถอยหลังได้)</p><div class="steps"><span>อ่านสรุป</span><span>ดู Animation</span><span>ศึกษาโค้ด C</span><span>ทำแบบทดสอบ</span></div></div><svg class="mini" id="mini" viewBox="0 0 120 100"></svg></header><nav id="nav"></nav><div id="app"></div><script>
+const $=s=>document.querySelector(s);
+/* ---------- animation helpers ---------- */
+const P={50:[200,25],30:[100,85],70:[300,85],20:[50,145],40:[150,145],60:[250,145],80:[350,145]},par={30:50,70:50,20:30,40:30,60:70,80:70};
+function tsvg(v,hl,dn){let s='<svg viewBox="0 0 400 180">';v.forEach(k=>{if(par[k]&&v.includes(par[k])){let a=P[par[k]],b=P[k];s+=`<line data-k="l${k}" x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="currentColor" opacity=".4"/>`}});
+v.forEach(k=>{let p=P[k],f=k==hl?'#f59e0b':dn.includes(k)?'#10b981':'#2563a8';s+=`<circle data-k="c${k}" cx="${p[0]}" cy="${p[1]}" r="17" fill="${f}"/><text data-k="t${k}" x="${p[0]}" y="${p[1]+5}" text-anchor="middle" fill="#fff" font-size="13">${k}</text>`});return s+'</svg>'}
+function treeF(){let o=[50,30,70,20,40,60,80],f=[],s=[...o].sort((a,b)=>a-b);
+o.forEach((k,i)=>f.push({h:tsvg(o.slice(0,i+1),k,[]),c:i?`แทรก ${k}: เทียบกับ root น้อยกว่าไปซ้าย มากกว่าไปขวา`:'แทรก 50 เป็น Root'}));
+s.forEach((k,i)=>f.push({h:tsvg(o,k,s.slice(0,i)),c:'Inorder (ซ้าย→ราก→ขวา): '+s.slice(0,i+1).join(' → ')}));return f}
+const GN={A:[40,90],B:[160,30],C:[160,150],D:[290,90]},GE=[['A','B',4],['A','C',1],['C','B',2],['B','D',1],['C','D',5]];
+function gsvg(d,dn,path){let s='<svg viewBox="0 0 330 180">';GE.forEach(([a,b,w])=>{let p=GN[a],q=GN[b],on=path&&((a+b)=='AC'||(a+b)=='CB'||(a+b)=='BD');s+=`<line x1="${p[0]}" y1="${p[1]}" x2="${q[0]}" y2="${q[1]}" stroke="${on?'#10b981':'currentColor'}" stroke-width="${on?4:1.5}" opacity="${on?1:.4}"/><text x="${(p[0]+q[0])/2+6}" y="${(p[1]+q[1])/2}" fill="currentColor" font-size="13">${w}</text>`});
+for(let k in GN){let p=GN[k];s+=`<circle cx="${p[0]}" cy="${p[1]}" r="17" fill="${dn.includes(k)?'#10b981':'#2563a8'}"/><text x="${p[0]}" y="${p[1]+5}" text-anchor="middle" fill="#fff">${k}</text><text x="${p[0]}" y="${p[1]-22}" text-anchor="middle" fill="currentColor" font-size="12">${d[k]}</text>`}return s+'</svg>'}
+function graphF(){const S=[[{A:0,B:'∞',C:'∞',D:'∞'},[],'เริ่มที่ A ระยะทาง A=0'],[{A:0,B:4,C:1,D:'∞'},['A'],'ผ่อนคลาย (relax) จาก A: B=4, C=1 เลือก C (น้อยสุด)'],[{A:0,B:3,C:1,D:6},['A','C'],'จาก C: B=1+2=3 (ดีกว่า 4), D=1+5=6 เลือก B'],[{A:0,B:3,C:1,D:4},['A','C','B'],'จาก B: D=3+1=4 (ดีกว่า 6)'],[{A:0,B:3,C:1,D:4},['A','C','B','D'],'ได้เส้นทางสั้นที่สุด A→C→B→D ต้นทุน 4']];
+return S.map((x,i)=>({h:gsvg(x[0],x[1],i==4),c:x[2]}))}
+function bars(a,h){return '<div class="bars">'+a.map((v,i)=>`<div style="height:${v*14}px;${h.includes(i)?'background:#f59e0b':''}">${v}</div>`).join('')+'</div>'}
+function sortF(m){let a=[...(window.SA||[5,2,9,1,6])],n=a.length,f=[],p=(h,c)=>f.push({h:bars(a,h),c});p([],'ข้อมูลเริ่มต้น');
+if(m=='bubble')for(let i=0;i<n-1;i++)for(let j=0;j<n-1-i;j++){let sw=a[j]>a[j+1];if(sw)[a[j],a[j+1]]=[a[j+1],a[j]];p([j,j+1],`รอบ ${i+1}: เทียบตำแหน่ง ${j},${j+1} ${sw?'→ สลับ':'→ ไม่สลับ'}`)}
+if(m=='selection')for(let i=0;i<n-1;i++){let k=i;for(let j=i+1;j<n;j++)if(a[j]<a[k])k=j;[a[i],a[k]]=[a[k],a[i]];p([i,k],`รอบ ${i+1}: หาตัวน้อยสุดที่ตำแหน่ง ${k} แล้วสลับไปที่ ${i}`)}
+if(m=='insertion')for(let i=1;i<n;i++){for(let j=i;j>0&&a[j-1]>a[j];j--){[a[j],a[j-1]]=[a[j-1],a[j]];p([j-1,j],`แทรกตัวที่ ${i}: เลื่อนไปทางซ้าย`)}if(f[f.length-1].c.indexOf('เลื่อน')<0||1)p([i],`จบการแทรกตัวที่ ${i}`)}
+return f}
+function searchF(){const a=[3,8,15,23,42,57,70],t=57;let lo=0,hi=6,f=[];while(lo<=hi){let m=(lo+hi)>>1;f.push({h:'<div class="cells">'+a.map((v,i)=>`<div style="${i<lo||i>hi?'opacity:.25':''}${i==m?';background:#f59e0b;color:#fff':''}">${v}<br><small>${i}</small></div>`).join('')+'</div>',c:`หา ${t}: low=${lo}, high=${hi}, mid=${m} → a[mid]=${a[m]} ${a[m]==t?'พบ!':a[m]<t?'น้อยกว่า ตัดครึ่งซ้ายทิ้ง':'มากกว่า ตัดครึ่งขวาทิ้ง'}`});if(a[m]==t)break;a[m]<t?lo=m+1:hi=m-1}return f}
+function hashF(){let t=Array(7).fill(''),f=[],sh=(h,c)=>f.push({h:'<div class="cells">'+t.map((v,i)=>`<div style="${h==i?'background:#f59e0b;color:#fff':''}">${v===''?'–':v}<br><small>${i}</small></div>`).join('')+'</div>',c});sh(-1,'Hash Table ขนาด 7, h(k)=k mod 7, แก้ชนด้วย Linear Probing');
+[15,22,8,29].forEach(k=>{let i=k%7;sh(i,`h(${k}) = ${k} mod 7 = ${i}`);while(t[i]!==''){sh(i,`ช่อง ${i} ถูกใช้แล้ว (ชน!) → ลองช่องถัดไป`);i=(i+1)%7}t[i]=k;sh(i,`ใส่ ${k} ที่ช่อง ${i}`)});return f}
+function cplxF(){return [4,8,16,32].map(n=>{let r=[['O(1)',1],['O(log n)',Math.log2(n)],['O(n)',n],['O(n log n)',n*Math.log2(n)],['O(n²)',n*n]];return{h:r.map(x=>`<div style="margin:5px 0">${x[0]} = ${x[1]}<div style="background:var(--ac);height:10px;border-radius:5px;width:${Math.max(1,x[1]/(n*n)*100)}%"></div></div>`).join(''),c:`n = ${n}: จำนวนการทำงานของแต่ละ Big-O (แถบเทียบกับ n²)`}})}
+/* ---------- content ---------- */
+const T=[
+{n:'1 Tree / BST',anim:treeF,notes:['<b>ศัพท์:</b> Root = โหนดบนสุด, Parent/Child = พ่อ/ลูก, Leaf = โหนดไม่มีลูก, Level = ระดับความลึก (root = 0), Height = จำนวนเส้นเชื่อมจาก root ไปใบที่ลึกสุด','<b>Binary Tree:</b> แต่ละโหนดมีลูกไม่เกิน 2 (ซ้าย/ขวา), height h มีโหนดได้มากสุด 2<sup>h+1</sup>−1','<b>BST:</b> ซ้าย &lt; โหนด &lt; ขวา ค้นหา/แทรกเฉลี่ย O(log n) แต่ถ้าข้อมูลเรียงมาแล้วจะเป็นเส้นตรง O(n)','<b>Traversal:</b> Preorder (ราก-ซ้าย-ขวา), Inorder (ซ้าย-ราก-ขวา ได้ค่าเรียงจากน้อยไปมากใน BST), Postorder (ซ้าย-ขวา-ราก)','<b>AVL Tree:</b> BST ที่ balance factor ทุกโหนดเป็น −1,0,1 หมุนแก้: LL→หมุนขวา, RR→หมุนซ้าย, LR→ซ้ายแล้วขวา, RL→ขวาแล้วซ้าย','<b>B-Tree:</b> ต้นไม้หลายทาง แต่ละโหนดเก็บหลายคีย์ ใบอยู่ระดับเดียวกันเสมอ ใช้ในฐานข้อมูล/ระบบไฟล์'],
+code:`struct Node{int key; struct Node *l,*r;};
+struct Node* insert(struct Node* t,int k){
+  if(!t){ t=malloc(sizeof *t); t->key=k; t->l=t->r=NULL; return t; }
+  if(k<t->key) t->l=insert(t->l,k);
+  else if(k>t->key) t->r=insert(t->r,k);
+  return t;
+}
+void inorder(struct Node* t){
+  if(!t) return;
+  inorder(t->l); printf("%d ",t->key); inorder(t->r);
+}`,qs:[
+[1,'เลือกตอบ','โหนดที่ไม่มีลูกเรียกว่าอะไร',['Root','Leaf','Parent','Level'],1,'Leaf คือโหนดปลายทางที่ไม่มีลูก'],
+[2,'อ่านแผนภาพ','ต้นไม้ root=50 ซ้าย=30 ขวา=70 Preorder คือข้อใด',['50 30 70','30 50 70','30 70 50','70 50 30'],0,'Preorder: ราก→ซ้าย→ขวา'],
+[3,'ติดตามอัลกอริทึม','แทรก 50,30,70,20,40 ลง BST แล้ว Inorder ได้อะไร (คั่นด้วยเว้นวรรค)',0,'20 30 40 50 70','Inorder ของ BST เรียงน้อยไปมาก'],
+[4,'คำนวณ','Binary Tree สมบูรณ์ height = 3 (root height 0) มีโหนดมากสุดกี่โหนด',0,'15','2^(3+1)−1 = 15'],
+[5,'ประยุกต์','แทรก 10,20,30 ใน AVL ต้องหมุนแบบใด',['Right','Left','Left-Right','Right-Left'],1,'เอียงขวาตรง (RR) → หมุนซ้าย ได้ 20 เป็น root']]},
+{n:'2 Graph',anim:graphF,notes:['<b>โครงสร้าง:</b> G=(V,E) จุดยอด (vertex) และเส้นเชื่อม (edge)','<b>Undirected</b> เส้นไปได้สองทาง, <b>Directed</b> A→B ไปได้ทางเดียว, <b>Weighted</b> เส้นมีน้ำหนัก/ต้นทุน','เก็บด้วย Adjacency Matrix (ง่าย กินที่ V²) หรือ Adjacency List (ประหยัดสำหรับกราฟเบาบาง)','<b>หาเส้นทาง:</b> BFS (ทีละชั้น ได้เส้นทางที่ใช้เส้นน้อยสุด), DFS (ลึกสุดก่อน)','<b>Shortest Path:</b> Dijkstra (น้ำหนักไม่ติดลบ), Bellman-Ford (รองรับติดลบ)','Undirected กราฟเต็มมี V(V−1)/2 เส้น, degree รวม = 2E'],
+code:`#define N 4
+#define INF 99999
+int g[N][N]; // 0=ไม่มีเส้น
+void dijkstra(int s){
+  int d[N],done[N]={0};
+  for(int i=0;i<N;i++) d[i]=INF; d[s]=0;
+  for(int c=0;c<N;c++){
+    int u=-1;
+    for(int i=0;i<N;i++) if(!done[i]&&(u<0||d[i]<d[u])) u=i;
+    done[u]=1;
+    for(int v=0;v<N;v++)
+      if(g[u][v]&&d[u]+g[u][v]<d[v]) d[v]=d[u]+g[u][v];
+  }
+}`,qs:[
+[1,'เลือกตอบ','กราฟที่เส้นเชื่อมมีลูกศรบอกทิศทางเรียกว่า',['Undirected','Directed Graph','Tree','Matrix'],1,'Directed Graph (Digraph)'],
+[2,'เลือกตอบ','เส้น A→B หมายความว่า',['ไปได้ทั้งสองทาง','ไปจาก A ไป B เท่านั้น','ไปจาก B ไป A เท่านั้น','ไม่มีทางไป'],1,'ลูกศรบอกทิศทางเดียว'],
+[3,'คำนวณ','กราฟไม่มีทิศ 5 จุดยอด เชื่อมกันครบทุกคู่ มีกี่เส้น',0,'10','5×4/2 = 10'],
+[4,'อ่านแผนภาพ','จากกราฟใน animation (AB=4, AC=1, CB=2, BD=1, CD=5) ต้นทุนสั้นที่สุดจาก A ไป D คือเท่าไร',0,'4','A→C→B→D = 1+2+1 = 4'],
+[5,'ประยุกต์','กราฟมีเส้นน้ำหนักติดลบ ควรใช้อัลกอริทึมใด',['Dijkstra','Bellman-Ford','BFS ปกติ','Inorder'],1,'Dijkstra ใช้ไม่ได้กับน้ำหนักติดลบ']]},
+{n:'3 Sorting',anim:sortF,sel:1,notes:['<b>Bubble:</b> เทียบคู่ติดกันแล้วสลับ ตัวใหญ่ลอยไปท้าย Best O(n) (มี flag), Worst O(n²)','<b>Selection:</b> หาตัวน้อยสุดของส่วนที่เหลือ สลับไปหน้า O(n²) ทุกกรณี สลับน้อย','<b>Insertion:</b> แทรกทีละตัวลงในส่วนที่เรียงแล้ว Best O(n), Worst O(n²) ดีกับข้อมูลเกือบเรียง','<b>Quick:</b> เลือก pivot แบ่งซ้าย-ขวา แล้วทำซ้ำ เฉลี่ย O(n log n), Worst O(n²) (pivot แย่)','<b>Merge:</b> แบ่งครึ่งแล้วรวมแบบเรียง O(n log n) ทุกกรณี ใช้หน่วยความจำเพิ่ม O(n) และ stable','Trace: เขียนอาร์เรย์หลังแต่ละรอบ/แต่ละขั้นเพื่อตรวจสอบ'],
+code:`void bubble(int a[],int n){
+  for(int i=0;i<n-1;i++)
+    for(int j=0;j<n-1-i;j++)
+      if(a[j]>a[j+1]){ int t=a[j]; a[j]=a[j+1]; a[j+1]=t; }
+}
+void merge(int a[],int l,int m,int r){
+  int tmp[r-l+1],i=l,j=m+1,k=0;
+  while(i<=m&&j<=r) tmp[k++]=a[i]<=a[j]?a[i++]:a[j++];
+  while(i<=m) tmp[k++]=a[i++];
+  while(j<=r) tmp[k++]=a[j++];
+  for(k=0;k<r-l+1;k++) a[l+k]=tmp[k];
+}
+void msort(int a[],int l,int r){
+  if(l>=r) return; int m=(l+r)/2;
+  msort(a,l,m); msort(a,m+1,r); merge(a,l,m,r);
+}`,qs:[
+[1,'เลือกตอบ','Bubble Sort ทำงานโดยเปรียบเทียบอะไร',['ตัวแรกกับตัวสุดท้าย','คู่ที่อยู่ติดกัน','ตัวกลาง','สุ่ม'],1,'เทียบและสลับคู่ติดกัน'],
+[2,'ติดตามอัลกอริทึม','Bubble Sort [5,2,9,1] หลังรอบที่ 1 ได้อะไร',0,'2 5 1 9','9 ลอยไปท้ายสุด'],
+[3,'ติดตามอัลกอริทึม','Selection Sort [4,3,1,2] หลังรอบที่ 1 ได้อะไร',0,'1 3 4 2','สลับ 4 กับตัวน้อยสุด 1'],
+[4,'เลือกตอบ','Quick Sort Worst case คือ',['O(n)','O(log n)','O(n log n)','O(n²)'],3,'pivot เป็นค่าน้อย/มากสุดซ้ำ ๆ'],
+[5,'คำนวณ','Merge Sort ข้อมูล 8 ตัว แบ่งครึ่งได้กี่ระดับ',0,'3','log₂8 = 3']]},
+{n:'4 Searching',anim:searchF,notes:['<b>Sequential Search:</b> ไล่ดูทีละตัว ไม่ต้องเรียงข้อมูล Best O(1), Worst/Avg O(n)','<b>Binary Search:</b> ต้องเรียงข้อมูลก่อน เทียบค่ากลาง แล้วตัดครึ่ง Worst O(log n)','จำนวนครั้งสูงสุดของ Binary Search = ⌊log₂n⌋+1','เลือกใช้: ข้อมูลน้อย/ไม่เรียง/ค้นครั้งเดียว → Sequential; ข้อมูลมากและค้นบ่อย (เรียงไว้แล้ว) → Binary'],
+code:`int binsearch(int a[],int n,int t){
+  int lo=0,hi=n-1;
+  while(lo<=hi){
+    int mid=(lo+hi)/2;
+    if(a[mid]==t) return mid;
+    if(a[mid]<t) lo=mid+1; else hi=mid-1;
+  }
+  return -1;
+}`,qs:[
+[1,'เลือกตอบ','Binary Search ต้องการเงื่อนไขใด',['ข้อมูลไม่ซ้ำ','ข้อมูลเรียงลำดับ','ข้อมูลเป็นจำนวนคู่','ใช้ลิงก์ลิสต์'],1,'ต้องเรียงลำดับก่อน'],
+[2,'คำนวณ','Sequential Search ข้อมูล 100 ตัว Worst case เปรียบเทียบกี่ครั้ง',0,'100','ตัวสุดท้ายหรือไม่พบ'],
+[3,'ติดตามอัลกอริทึม','ค้น 57 ใน [3,8,15,23,42,57,70] ด้วย Binary Search เปรียบเทียบกี่ครั้ง',0,'2','รอบ 1: mid=23 (น้อยกว่า 57 ไปขวา) รอบ 2: mid=57 พบ รวม 2 ครั้ง'],
+[4,'คำนวณ','ข้อมูล 1024 ตัว Binary Search Worst case กี่ครั้ง',0,'11','⌊log₂1024⌋+1 = 11'],
+[5,'ประยุกต์','ข้อมูล 5 ตัวไม่เรียง ค้นครั้งเดียว ควรใช้อะไร',['Binary (เรียงก่อน)','Sequential','Quick Sort','AVL'],1,'การเรียงก่อนเสียเวลามากกว่าไล่ค้น']]},
+{n:'5 Hashing',anim:hashF,notes:['<b>Hash Function:</b> แปลง key เป็นตำแหน่ง เช่น h(k)=k mod m (m ควรเป็นจำนวนเฉพาะ)','<b>Collision:</b> สอง key ได้ตำแหน่งเดียวกัน','<b>Linear Probing:</b> ถ้าชน ลองช่องถัดไป (i+1) mod m จนว่าง','ข้อเสีย: เกิด clustering; ค้นหาเฉลี่ย O(1) แต่เลวร้ายสุด O(n)','ค้นหา: คำนวณ h(k) แล้วไล่ probe ตามลำดับเดียวกับตอนแทรก'],
+code:`#define M 7
+int table[M]; // -1 = ว่าง
+void insert(int k){
+  int i=k%M;
+  while(table[i]!=-1) i=(i+1)%M; // linear probing
+  table[i]=k;
+}`,qs:[
+[1,'เลือกตอบ','Hash Function มีหน้าที่หลักอะไร',['เรียงข้อมูล','แปลง key เป็นตำแหน่งในตาราง','ลบข้อมูล','เข้ารหัส'],1,'map key → index'],
+[2,'คำนวณ','h(k)=k mod 7 ค่า k=25 ได้ตำแหน่งอะไร',0,'4','25 = 3×7+4'],
+[3,'เลือกตอบ','Collision คืออะไร',['ตารางเต็ม','key ต่างกันได้ตำแหน่งเดียวกัน','key ซ้ำ','hash ผิด'],1,'ตำแหน่งชนกัน'],
+[4,'คำนวณ','ตารางขนาด 7 ใส่ 15 แล้ว 22 (Linear Probing) 22 อยู่ช่องใด',0,'2','ทั้งคู่ได้ 1 → 22 ไปช่อง 2'],
+[5,'ติดตามอัลกอริทึม','ใส่ 15,22,8,29 (ขนาด 7) 29 อยู่ช่องใด',0,'4','15→1, 22→2, 8→3, 29 เริ่ม 1 ชนไป 2,3 แล้วว่างที่ 4']]},
+{n:'6 Design / Big-O',anim:cplxF,notes:['<b>Divide & Conquer:</b> แบ่งปัญหา แก้ย่อย แล้วรวมผล เช่น Merge Sort, Binary Search','<b>Greedy:</b> เลือกที่ดีที่สุดเฉพาะหน้าทุกขั้น เช่น ทอนเหรียญ, Dijkstra (ไม่รับประกันเสมอไป)','<b>Backtracking:</b> ลองเลือก ถ้าตันให้ย้อนกลับ เช่น N-Queens, Sudoku','<b>Dynamic Programming:</b> จำคำตอบปัญหาย่อยซ้ำ ๆ เช่น Fibonacci, Knapsack','<b>Best/Worst Case:</b> กรณีดีสุด/แย่สุดของอัลกอริทึม','<b>Big-O:</b> O(1) &lt; O(log n) &lt; O(n) &lt; O(n log n) &lt; O(n²) &lt; O(2ⁿ) ดูเฉพาะพจน์โตสุดและตัดค่าคงที่'],
+code:`int fib(int n){
+  int dp[n+2]; dp[0]=0; dp[1]=1;
+  for(int i=2;i<=n;i++) dp[i]=dp[i-1]+dp[i-2]; // O(n)
+  return dp[n];
+}`,qs:[
+[1,'เลือกตอบ','ข้อใดใช้แนวคิด Divide and Conquer',['Merge Sort','Bubble Sort','Linear Probing','Selection'],0,'แบ่งครึ่ง เรียง แล้วรวม'],
+[2,'เลือกตอบ','Greedy Algorithm เลือกอย่างไร',['ลองทุกทาง','ตัวเลือกดีที่สุดเฉพาะหน้า','จำคำตอบเก่า','ย้อนกลับเสมอ'],1,'local optimum'],
+[3,'เลือกตอบ','ปัญหา N-Queens เหมาะกับเทคนิคใด',['Greedy','Backtracking','Hashing','Inorder'],1,'วางแล้วตันก็ย้อนกลับ'],
+[4,'คำนวณ','ใช้ DP หาค่า fib(6) (fib0=0, fib1=1)',0,'8','0,1,1,2,3,5,8'],
+[5,'ประยุกต์','for(i<n){for(j<n){...}} มี Time Complexity เท่าใด',['O(n)','O(n log n)','O(n²)','O(log n)'],2,'ลูปซ้อน n×n']]}];
+const cl=(a,f)=>'<div class="cells">'+a.map((v,i)=>`<div style="${f(i)}">${v}<br><small>${i}</small></div>`).join('')+'</div>',HL='background:#f59e0b;color:#fff';
+function trv(o,n){const all=[50,30,70,20,40,60,80];return o.map((k,i)=>({h:tsvg(all,k,o.slice(0,i)),c:n+': '+o.slice(0,i+1).join(' → ')}))}
+function lay(t,d,c){if(!t)return;c.d=Math.max(c.d,d);lay(t[1],d+1,c);t.x=25+c.i++*55;t.y=25+d*55;lay(t[2],d+1,c)}
+function dsvg(t,hl){const C={i:0,d:0};lay(t,0,C);let l='',c='';(function w(t){if(!t)return;[t[1],t[2]].forEach(k=>{if(k){l+=`<line data-k="l${k[0]}" x1="${t.x}" y1="${t.y}" x2="${k.x}" y2="${k.y}" stroke="currentColor" opacity=".4"/>`;w(k)}});c+=`<circle data-k="c${t[0]}" cx="${t.x}" cy="${t.y}" r="16" fill="${t[0]==hl?'#f59e0b':'#2563a8'}"/><text data-k="t${t[0]}" x="${t.x}" y="${t.y+5}" text-anchor="middle" fill="#fff">${t[0]}</text>`})(t);return `<svg viewBox="0 0 ${Math.max(200,C.i*55+10)} ${Math.max(150,C.d*55+60)}" style="max-width:${Math.max(300,C.i*55+30)}px">`+l+c+'</svg>'}
+function rot(k){const B=[[[[30,[20,[10]]],'กรณี LL: โหนด 30 ซ้ายหนักเกิน (balance factor = +2)',30],[[20,[10],[30]],'หมุนขวา (Right Rotation) รอบ 30 → 20 ขึ้นเป็น root สมดุลแล้ว',-1]],[[[10,0,[20,0,[30]]],'กรณี RR: โหนด 10 ขวาหนักเกิน (balance factor = −2)',10],[[20,[10],[30]],'หมุนซ้าย (Left Rotation) รอบ 10 → 20 ขึ้นเป็น root',-1]],[[[30,[10,0,[20]]],'กรณี LR: ลูกซ้ายของ 30 คือ 10 ที่ขวาหนัก',30],[[30,[20,[10]]],'ขั้น 1: หมุนซ้ายที่ 10 → กลายเป็นกรณี LL',20],[[20,[10],[30]],'ขั้น 2: หมุนขวาที่ 30 → สมดุล',-1]],[[[10,0,[30,[20]]],'กรณี RL: ลูกขวาของ 10 คือ 30 ที่ซ้ายหนัก',10],[[10,0,[20,0,[30]]],'ขั้น 1: หมุนขวาที่ 30 → กลายเป็นกรณี RR',20],[[20,[10],[30]],'ขั้น 2: หมุนซ้ายที่ 10 → สมดุล',-1]]];return B[k].map(x=>({h:dsvg(x[0],x[2]),c:x[1]}))}
+function btF(){const bt=L=>L.map(r=>'<div style="display:flex;justify-content:center;gap:16px;margin:12px 0">'+r.map(n=>`<div style="border:2px solid var(--ac);border-radius:6px;padding:4px 10px">${n.join(' | ')}</div>`).join('')+'</div>').join('');return[[[[[10]]],'แทรก 10'],[[[[10,20]]],'แทรก 20 (แต่ละโหนดเก็บได้สูงสุด 2 คีย์)'],[[[[10,20,30]]],'แทรก 30 → โหนดมี 3 คีย์ เกินจำกัด!'],[[[[20]],[[10],[30]]],'แยกโหนด (split): ดันค่ากลาง 20 ขึ้นเป็น root'],[[[[20]],[[10],[30,40]]],'แทรก 40 → ไปโหนดขวา'],[[[[20]],[[10],[30,40,50]]],'แทรก 50 → โหนดขวาเกินอีก'],[[[[20,40]],[[10],[30],[50]]],'split: ดัน 40 ขึ้นไป ใบทุกใบยังอยู่ระดับเดียวกันเสมอ']].map(x=>({h:bt(x[0]),c:x[1]}))}
+function trg(m){const e=o=>({A:'',B:'',C:'',D:'',...o});const S=m=='BFS'?[[{A:1},['A'],'เริ่มที่ A (ตัวเลข = ลำดับที่เยี่ยม) คิว=[B,C]'],[{A:1,B:2},['A','B'],'เอา B ออกจากคิว เพิ่มเพื่อนบ้านที่ยังไม่เยี่ยม คือ D → คิว=[C,D]'],[{A:1,B:2,C:3},['A','B','C'],'เอา C ออก (เพื่อนบ้านเยี่ยมแล้วหมด) คิว=[D]'],[{A:1,B:2,C:3,D:4},['A','B','C','D'],'เอา D ออก คิวว่าง จบ: เส้นทางที่ใช้เส้นน้อยสุด A→D คือ A-B-D (2 เส้น)']]:[[{A:1},['A'],'เริ่มที่ A สแตก=[A]'],[{A:1,B:2},['A','B'],'ไปเพื่อนบ้านแรกที่ยังไม่เยี่ยม: B สแตก=[A,B]'],[{A:1,B:2,C:3},['A','B','C'],'จาก B ไป C ต่อ (ลงลึกก่อน) สแตก=[A,B,C]'],[{A:1,B:2,C:3,D:4},['A','B','C','D'],'จาก C ไป D สแตก=[A,B,C,D]'],[{A:1,B:2,C:3,D:4},['A','B','C','D'],'D ไม่มีทางไปต่อ → ย้อนกลับ (pop) ทีละชั้นจนสแตกว่าง จบ']];return S.map(x=>({h:gsvg(e(x[0]),x[1],0),c:x[2]}))}
+function qsF(){let a=[...(window.QA||[5,2,9,1,6])],f=[],p=(h,c)=>f.push({h:bars(a,h),c});p([],'ข้อมูลเริ่มต้น');function q(l,r){if(l>=r)return;let pv=a[r],i=l;p([r],`ช่วง ${l}..${r}: เลือก pivot=${pv} (ตัวท้าย)`);for(let j=l;j<r;j++){if(a[j]<pv){[a[i],a[j]]=[a[j],a[i]];i++}p([j,r],`ตรวจตำแหน่ง ${j}: ตัวที่น้อยกว่า pivot ถูกย้ายไปฝั่งซ้าย`)}[a[i],a[r]]=[a[r],a[i]];p([i],`วาง pivot ไว้ที่ตำแหน่ง ${i} (ซ้ายน้อยกว่า ขวามากกว่า)`);q(l,i-1);q(i+1,r)}q(0,a.length-1);return f}
+function msF(){const g=G=>'<div style="display:flex;gap:10px;flex-wrap:wrap">'+G.map(x=>'<div class="cells" style="border:2px solid var(--ac);padding:3px;border-radius:8px">'+x.map(v=>`<div>${v}</div>`).join('')+'</div>').join('')+'</div>';return[[[[5,2,9,1,6]],'ข้อมูลเริ่มต้น'],[[[5,2,9],[1,6]],'แบ่งครึ่ง (Divide)'],[[[5,2],[9],[1],[6]],'แบ่งต่อ'],[[[5],[2],[9],[1],[6]],'แบ่งจนเหลือกลุ่มละ 1 ตัว (เรียงแล้วโดยปริยาย)'],[[[2,5],[9],[1,6]],'รวม (Merge) [5]+[2] → [2,5] และ [1]+[6] → [1,6]'],[[[2,5,9],[1,6]],'รวม [2,5]+[9] → [2,5,9]'],[[[1,2,5,6,9]],'รวม [2,5,9]+[1,6]: เทียบหัวสองกลุ่มหยิบตัวน้อยกว่าทีละตัว → เรียบร้อย']].map(x=>({h:g(x[0]),c:x[1]}))}
+function seqF(){const a=[7,3,9,5,1],f=[];for(let j=0;j<5;j++){f.push({h:cl(a,i=>i==j?HL:i<j?'opacity:.3':''),c:`หา 5: a[${j}]=${a[j]} ${a[j]==5?'พบ! หยุด':'≠ 5 ไปตัวถัดไป'}`});if(a[j]==5)break}return f}
+function hashS(){const t=['',15,22,8,29,'',''],f=[];let i=1;f.push({h:cl(t,j=>''),c:'ตารางหลังแทรก 15,22,8,29 ค้นหา 29: h(29)=29 mod 7 = 1'});for(;;i++){f.push({h:cl(t,j=>j==i?HL:''),c:`ตรวจช่อง ${i}: ${t[i]==29?'พบ 29!':t[i]+' ≠ 29 → probe ช่องถัดไป'}`});if(t[i]==29)break}return f}
+function dcF(){let a=[3,8,2,9,4,7],f=[];const sh=(l,r,c)=>f.push({h:cl(a,i=>i<l||i>r?'opacity:.25':'background:var(--bd)'),c});function m(l,r){if(l==r){sh(l,r,`เหลือ 1 ตัว: max=${a[l]}`);return a[l]}let d=(l+r)>>1;sh(l,r,`แบ่ง [${l}..${r}] เป็น [${l}..${d}] และ [${d+1}..${r}]`);let x=m(l,d),y=m(d+1,r),z=Math.max(x,y);sh(l,r,`รวมผล: max(${x},${y}) = ${z}`);return z}m(0,5);return f}
+function grF(){let r=41,u=[],f=[{h:'<h3>ทอน 41 บาท ด้วยเหรียญ 25, 10, 5, 1</h3>',c:'Greedy: เลือกเหรียญใหญ่สุดที่ใช้ได้ก่อนเสมอ'}];[25,10,5,1].forEach(c=>{let k=Math.floor(r/c);if(k){r-=c*k;for(let i=0;i<k;i++)u.push(c);f.push({h:`<h3>เหลือ ${r} บาท</h3><div style="font-size:1.2rem">ใช้แล้ว: ${u.join(' + ')}</div>`,c:`เลือกเหรียญ ${c} จำนวน ${k} เหรียญ`})}});return f}
+function nqF(){let f=[],c=[];const sh=m=>f.push({h:'<div style="display:grid;grid-template-columns:repeat(4,44px);gap:2px">'+Array.from({length:16},(_,k)=>`<div style="height:44px;display:flex;align-items:center;justify-content:center;background:${((k>>2)+(k&3))%2?'#cbd5e1':'#f1f5f9'};color:#111;font-size:24px">${c[k>>2]===(k&3)?'♛':''}</div>`).join('')+'</div>',c:m});const ok=(r,k)=>c.every((x,i)=>x!=k&&Math.abs(x-k)!=r-i);function s(r){if(r==4){sh('สำเร็จ! วางครบ 4 ตัว');return 1}for(let k=0;k<4;k++)if(ok(r,k)){c[r]=k;sh(`แถว ${r}: วางที่คอลัมน์ ${k}`);if(s(r+1))return 1;c.length=r;sh(`แถว ${r+1} ไม่มีที่วาง → ย้อนกลับ (backtrack) ลองคอลัมน์ถัดไปของแถว ${r}`)}return 0}s(0);return f}
+function dpF(){const d=[],f=[];for(let i=0;i<8;i++){d[i]=i<2?i:d[i-1]+d[i-2];f.push({h:cl(Array.from({length:8},(_,j)=>j<=i?d[j]:'–'),j=>j==i?HL:''),c:i<2?`ค่าตั้งต้น dp[${i}] = ${i}`:`dp[${i}] = dp[${i-1}] + dp[${i-2}] = ${d[i-1]} + ${d[i-2]} = ${d[i]} (ใช้คำตอบที่จำไว้ ไม่คำนวณซ้ำ)`})}return f}
+const A=[[['แทรก BST + Inorder',treeF],['Preorder',()=>trv([50,30,20,40,70,60,80],'Preorder (ราก→ซ้าย→ขวา)')],['Postorder',()=>trv([20,40,30,60,80,70,50],'Postorder (ซ้าย→ขวา→ราก)')],['AVL: LL (หมุนขวา)',()=>rot(0)],['AVL: RR (หมุนซ้าย)',()=>rot(1)],['AVL: LR (ซ้าย-ขวา)',()=>rot(2)],['AVL: RL (ขวา-ซ้าย)',()=>rot(3)],['B-Tree (2 คีย์/โหนด)',btF]],[['Dijkstra (เส้นทางสั้นสุด)',graphF],['BFS (ใช้คิว)',()=>trg('BFS')],['DFS (ใช้สแตก)',()=>trg('DFS')]],[['Bubble Sort',()=>sortF('bubble')],['Selection Sort',()=>sortF('selection')],['Insertion Sort',()=>sortF('insertion')],['Quick Sort',qsF],['Merge Sort',msF]],[['Binary Search',searchF],['Sequential Search',seqF]],[['แทรก + Linear Probing',hashF],['ค้นหาใน Hash Table',hashS]],[['Big-O เปรียบเทียบ',cplxF],['Divide & Conquer',dcF],['Greedy: ทอนเหรียญ',grF],['Backtracking: 4-Queens',nqF],['DP: Fibonacci',dpF]]];
+/* ---------- extra cases ---------- */
+const W=(g,v,fn)=>()=>{window[g]=v;const r=fn();window[g]=null;return r};
+function searchF(t=57){const a=[3,8,15,23,42,57,70],f=[],cs=(lo,hi,m)=>'<div class="cells">'+a.map((v,i)=>`<div style="${i<lo||i>hi?'opacity:.25':''}${i==m?';background:#f5a623;color:#fff':''}">${v}<br><small>${i}</small></div>`).join('')+'</div>';let lo=0,hi=6,n=0;while(lo<=hi){let m=(lo+hi)>>1;n++;f.push({h:cs(lo,hi,m),c:`หา ${t}: low=${lo}, high=${hi}, mid=${m} → a[mid]=${a[m]} ${a[m]==t?`พบ! (เทียบ ${n} ครั้ง)`:a[m]<t?'น้อยกว่า ตัดครึ่งซ้ายทิ้ง':'มากกว่า ตัดครึ่งขวาทิ้ง'}`});if(a[m]==t)return f;a[m]<t?lo=m+1:hi=m-1}f.push({h:cs(9,0,-1),c:`low > high → ไม่พบ ${t} (เทียบ ${n} ครั้งแล้วหมดช่วงค้นหา)`});return f}
+function seqF(t=5){const a=[7,3,9,5,1],f=[];for(let j=0;j<5;j++){f.push({h:cl(a,i=>i==j?HL:i<j?'opacity:.3':''),c:`หา ${t}: a[${j}]=${a[j]} ${a[j]==t?`พบ! หยุด (เทียบ ${j+1} ครั้ง)`:`≠ ${t} ไปตัวถัดไป`}`});if(a[j]==t)return f}f.push({h:cl(a,()=>'opacity:.3'),c:`ไล่ครบ 5 ตัวแล้วไม่พบ ${t} → เทียบ 5 ครั้ง (Worst case O(n))`});return f}
+function bstS(t){const o=[50,30,70,20,40,60,80],ch={50:[30,70],30:[20,40],70:[60,80]},f=[],v=[];let k=50;for(;;){v.push(k);const d=v.slice(0,-1);if(k==t){f.push({h:tsvg(o,k,d),c:`เทียบ ${t} กับ ${k}: เท่ากัน → พบแล้ว! เทียบ ${v.length} ครั้ง`});break}f.push({h:tsvg(o,k,d),c:`เทียบ ${t} กับ ${k}: ${t<k?'น้อยกว่า → ไปซ้าย':'มากกว่า → ไปขวา'}`});const c=ch[k];if(!c){f.push({h:tsvg(o,-1,v),c:`ถึงใบแล้วไม่มีลูกให้ไปต่อ → ไม่พบ ${t} ใน BST`});break}k=c[t<k?0:1]}return f}
+function skewF(){const ks=[10,20,30,40,50],f=[];ks.forEach((k,i)=>{let t=[k];for(let j=i-1;j>=0;j--)t=[ks[j],0,t];f.push({h:dsvg(t,k),c:i?`แทรก ${k}: มากกว่าทุกตัว ไปขวาต่อเนื่อง ความสูง = ${i}`:'แทรก 10 เป็น root'})});f.push({h:f[4].h,c:'⚠️ แทรกข้อมูลที่เรียงมาแล้ว → BST กลายเป็น linked list ค้นหา O(n) แทนที่จะเป็น O(log n) นี่คือเหตุผลที่ต้องมี AVL'});return f}
+function delF(){const T1=[50,[30,[20],[40]],[70,[60],[80]]];return[[[50,[30,[20],[40]],[70]],20,'กรณี 1: ลบ 20 ซึ่งเป็นใบ (ไม่มีลูก) → ตัดทิ้งได้เลย'],[[50,[30,0,[40]],[70]],-1,'ผลลัพธ์: BST ยังถูกต้อง'],[[50,[30,0,[40]],[70]],30,'กรณี 2: ลบ 30 ที่มีลูกเดียว (40) → ให้ลูกขึ้นมาแทนที่'],[[50,[40],[70]],-1,'ผลลัพธ์: 40 ขึ้นมาแทน 30'],[T1,50,'กรณี 3: ลบ 50 ที่มี 2 ลูก → หา successor = ตัวน้อยสุดของฝั่งขวา'],[T1,60,'successor คือ 60 (ไปขวา 1 ครั้ง แล้วซ้ายสุด)'],[[60,[30,[20],[40]],[70,0,[80]]],-1,'เอา 60 ไปแทนที่ 50 แล้วลบ 60 เดิมออก → BST ยังถูกต้อง']].map(x=>({h:dsvg(x[0],x[1]),c:x[2]}))}
+function adjF(){const n='ABCD',M=[0,1,2,3].map(()=>[0,0,0,0]),Ls={A:[],B:[],C:[],D:[]},f=[],mk=h=>{let s='<div style="display:flex;gap:28px;flex-wrap:wrap;justify-content:center"><div class="gm"><i class="hd"></i>'+[...n].map(x=>`<i class="hd">${x}</i>`).join('');M.forEach((r,i)=>{s+=`<i class="hd">${n[i]}</i>`+r.map((v,j)=>`<i style="${h&&((i==h[0]&&j==h[1])||(i==h[1]&&j==h[0]))?'background:#f5a623;color:#fff':v?'background:var(--ac);color:#fff':''}">${v}</i>`).join('')});return s+'</div><div>'+[...n].map(x=>`<div><b>${x}</b> → ${Ls[x].map(y=>y[0]+'('+y[1]+')').join(', ')||'–'}</div>`).join('')+'</div></div>'};f.push({h:mk(),c:'กราฟ 4 จุดยอด: ซ้าย = Adjacency Matrix (ตาราง V×V) ขวา = Adjacency List'});GE.forEach(([a,b,w])=>{const i=n.indexOf(a),j=n.indexOf(b);M[i][j]=M[j][i]=w;Ls[a].push([b,w]);Ls[b].push([a,w]);f.push({h:mk([i,j]),c:`เพิ่มเส้น ${a}–${b} น้ำหนัก ${w}: matrix ใส่ 2 ช่อง (สมมาตร) / list ใส่ทั้งสองฝั่ง`})});f.push({h:mk(),c:'Matrix ใช้ที่ V² = 16 ช่อง (เช็กเส้น O(1)) ส่วน List ใช้ V+2E (ประหยัดเมื่อเส้นน้อย)'});return f}
+function bubB(a0){let a=[...a0],n=a.length,f=[],p=(h,c)=>f.push({h:bars(a,h),c});p([],'ข้อมูลเริ่มต้น');for(let i=0;i<n-1;i++){let s=0;for(let j=0;j<n-1-i;j++){let w=a[j]>a[j+1];if(w){[a[j],a[j+1]]=[a[j+1],a[j]];s=1}p([j,j+1],`รอบ ${i+1}: เทียบ ${j},${j+1} ${w?'→ สลับ':'→ ไม่สลับ'}`)}if(!s){p([],`รอบ ${i+1} ไม่มีการสลับเลย → เรียงเสร็จแล้ว หยุดทันที (Best case O(n))`);break}}return f}
+function chainF(){const t=[[],[],[],[],[],[],[]],f=[],sh=(h,c)=>f.push({h:'<div class="chain">'+t.map((l,i)=>`<div class="row${h==i?' hi':''}"><b>${i}</b>${l.map(v=>`<span class="nd">${v}</span>`).join('<i class="ar">→</i>')}</div>`).join('')+'</div>',c});sh(-1,'Separate Chaining: ทุกช่องเป็นลิสต์เชื่อม ชนกันก็ต่อท้ายได้ ไม่ต้อง probe');[15,22,8,29,10].forEach(k=>{const i=k%7;sh(i,`h(${k}) = ${k} mod 7 = ${i}${t[i].length?' → ช่องนี้มีข้อมูลแล้ว (ชน) ต่อท้ายลิสต์':''}`);t[i].push(k);sh(i,`ใส่ ${k} ที่ช่อง ${i} (ลิสต์ยาว ${t[i].length})`)});sh(-1,'ค้นหา: คำนวณ h(k) แล้วไล่เฉพาะลิสต์ของช่องนั้น ช่อง 1 ยาว 4 จึงช้าลง ถ้า hash ดีลิสต์จะสั้น เฉลี่ย O(1)');return f}
+function hashNF(){const t=['',15,22,8,29,'',''],tt=t.map(v=>v===''?'–':v),f=[],k=36;f.push({h:cl(tt,()=>''),c:`ค้นหา ${k}: h(${k}) = ${k} mod 7 = ${k%7} เริ่มตรวจที่ช่อง 1`});for(let i=1;;i++){f.push({h:cl(tt,j=>j==i?HL:''),c:t[i]===''?`ช่อง ${i} ว่าง → หยุด สรุป: ไม่พบ ${k} (ถ้ามีจริงต้องอยู่ก่อนช่องว่างนี้)`:`ช่อง ${i}: ${t[i]} ≠ ${k} → probe ต่อ`});if(t[i]==='')break}return f}
+function grF2(){const f=[],p=(h,c)=>f.push({h:`<div class="big">${h}</div>`,c});p('เหรียญ 1, 3, 4 ทอน 6 บาท','ลอง Greedy กับชุดเหรียญที่ไม่ใช่แบบมาตรฐาน');p('Greedy: 4 + 1 + 1 = <b class="bad">3 เหรียญ</b>','Greedy หยิบ 4 (ใหญ่สุดที่ใช้ได้) เหลือ 2 → หยิบ 1 → หยิบ 1');p('ที่ดีที่สุด: 3 + 3 = <b class="good">2 เหรียญ</b>','Greedy ไม่ได้ดีที่สุดเสมอไป! ต้องใช้ DP (ดูกรณีถัดไป)');return f}
+function dpCF(){const C=[1,3,4],d=[0],f=[],sh=i=>cl(Array.from({length:7},(_,j)=>j<=i?d[j]:'–'),j=>j==i?HL:'');f.push({h:sh(0),c:'DP ทอนเหรียญ (1,3,4): dp[i] = จำนวนเหรียญน้อยสุดที่ทอน i บาท, dp[0]=0'});for(let i=1;i<7;i++){const cd=C.filter(c=>c<=i).map(c=>[c,d[i-c]+1]);d[i]=Math.min(...cd.map(x=>x[1]));f.push({h:sh(i),c:`dp[${i}] = min(${cd.map(x=>`dp[${i-x[0]}]+1=${x[1]}`).join(', ')}) = ${d[i]}`})}f.push({h:sh(6),c:'dp[6] = 2 (3+3) ดีกว่า Greedy ที่ได้ 3 — DP จำคำตอบย่อยแล้วเลือกที่ดีที่สุดจริง'});return f}
+function bigF(){return[['for(i=0;i&lt;n;i++) x++;','O(n)','ลูปเดียววิ่ง n รอบ'],['for(i=0;i&lt;n;i++)\n  for(j=0;j&lt;n;j++) x++;','O(n²)','ลูปซ้อน n×n รอบ'],['for(i=1;i&lt;n;i*=2) x++;','O(log n)','i เพิ่มเป็นสองเท่าทุกรอบ → log₂n รอบ'],['int fib(int n){\n  return n&lt;2?n:fib(n-1)+fib(n-2);\n}','O(2ⁿ)','เรียกซ้ำแตกสองกิ่ง คำนวณซ้ำมหาศาล → DP ลดเหลือ O(n)']].map(x=>({h:`<pre>${x[0]}</pre><div class="big"><b>${x[1]}</b></div>`,c:x[2]}))}
+A[0].push(['Level-order',()=>trv([50,30,70,20,40,60,80],'Level-order (ทีละชั้น ซ้าย→ขวา)')],['BST ค้นหา: พบ',()=>bstS(60)],['BST ค้นหา: ไม่พบ',()=>bstS(45)],['BST ลบ: 3 กรณี',delF],['BST เอียง (Worst)',skewF]);
+A[1].push(['Matrix vs List',adjF]);
+A[2].push(['Bubble: เรียงแล้ว (Best)',()=>bubB([1,2,5,6,9])],['Bubble: กลับด้าน (Worst)',W('SA',[9,6,5,2,1],()=>sortF('bubble'))],['Insertion: เรียงแล้ว (Best)',W('SA',[1,2,5,6,9],()=>sortF('insertion'))],['Insertion: กลับด้าน (Worst)',W('SA',[9,6,5,2,1],()=>sortF('insertion'))],['Quick: เรียงแล้ว (Worst)',W('QA',[1,2,5,6,9],qsF)]);
+A[3].push(['Binary: พบรอบแรก (Best)',()=>searchF(23)],['Binary: ไม่พบ',()=>searchF(50)],['Binary: ค่าท้ายสุด',()=>searchF(70)],['Sequential: เจอตัวแรก (Best)',()=>seqF(7)],['Sequential: ไม่พบ',()=>seqF(4)]);
+A[4].push(['Chaining (ลิสต์เชื่อม)',chainF],['ค้นหา: ไม่พบ',hashNF]);
+A[5].push(['Greedy ล้มเหลว',grF2],['DP: ทอนเหรียญ',dpCF],['Big-O จากโค้ด',bigF]);
+const IC=['🌳','🕸️','📊','🔍','#️⃣','🧠'],HD=['หัวข้อ','ดี / เฉลี่ย','แย่สุด'];
+const X=[
+['เหมือนเกมทายเลข "มากกว่าหรือน้อยกว่า 50?" ทุกคำตอบตัดตัวเลือกทิ้งครึ่งหนึ่ง',[['BST ค้นหา/แทรก','O(log n)','O(n) ถ้าเอียง'],['AVL ค้นหา/แทรก','O(log n)','O(log n)'],['Traversal ทุกแบบ','O(n)','O(n)']],['Inorder ของ BST ต้องได้ค่าเรียงน้อยไปมาก ใช้ตรวจว่าวาดถูกหรือไม่','ลบโหนดที่มี 2 ลูก: แทนด้วย successor (น้อยสุดฝั่งขวา) หรือ predecessor (มากสุดฝั่งซ้าย)']],
+['เหมือนแผนที่เมือง: จุดยอด = สถานที่ เส้นเชื่อม = ถนน น้ำหนัก = ระยะทางหรือเวลา',[['BFS / DFS','O(V+E)','O(V+E)'],['Dijkstra (อาร์เรย์)','O(V²)','O(V²)'],['Bellman-Ford','O(VE)','O(VE)']],['BFS ใช้คิว (เข้าก่อนออกก่อน) ส่วน DFS ใช้สแตก (เข้าหลังออกก่อน)','Dijkstra ใช้กับน้ำหนักติดลบไม่ได้ เพราะจุดที่เลือกแล้วอาจถูกทำให้ดีขึ้นได้อีก']],
+['เหมือนเรียงไพ่ในมือ: แต่ละวิธีต่างกันที่ "เรียงอย่างไร" และ "เสียแรงเท่าไร"',[['Bubble / Insertion','O(n)','O(n²)'],['Selection','O(n²)','O(n²)'],['Quick Sort','O(n log n)','O(n²)'],['Merge Sort','O(n log n)','O(n log n)']],['ข้อสอบชอบถามผลหลังรอบที่ k ให้เขียนอาร์เรย์ทุกรอบ อย่าคิดในหัว','Quick Sort เลือก pivot ตัวท้ายแล้วเจอข้อมูลเรียงอยู่แล้ว = Worst case O(n²)']],
+['เหมือนหาคำในพจนานุกรม: เปิดกลางเล่ม แล้วตัดสินใจไปครึ่งหน้าหรือครึ่งหลัง',[['Sequential','O(1) เจอตัวแรก','O(n)'],['Binary','O(1) เจอตรงกลาง','O(log n)']],['Binary Search ต้องเรียงก่อนเสมอ ถ้ายังไม่เรียงต้องนับเวลาเรียงด้วย','รอบสูงสุด = ⌊log₂n⌋+1 เช่น 1024 ตัว → 11 รอบ']],
+['เหมือนตู้ล็อกเกอร์: เลขตู้ = h(ชื่อ) เปิดตรงช่องได้เลยโดยไม่ต้องไล่หา',[['Linear Probing','O(1)','O(n)'],['Chaining','O(1)','O(n)']],['ตอนค้นต้อง probe ตามลำดับเดียวกับตอนแทรก และหยุดเมื่อเจอช่องว่าง','ตารางยิ่งเต็ม ยิ่งชนบ่อย และ Linear Probing จะเกิด clustering']],
+['เหมือนกล่องเครื่องมือ: แต่ละแนวคิดเหมาะกับปัญหาคนละแบบ ส่วน Big-O บอกว่าทนข้อมูลใหญ่ได้แค่ไหน',[['Merge Sort (D&C)','O(n log n)','O(n log n)'],['Fibonacci เรียกซ้ำ','—','O(2ⁿ)'],['Fibonacci แบบ DP','O(n)','O(n)']],['Greedy เร็วแต่ไม่รับประกันว่าดีที่สุด ดูกรณีเหรียญ 1,3,4','Big-O ตัดค่าคงที่และพจน์เล็ก เช่น 3n²+5n+2 → O(n²)']]];
+const hl=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/(\/\/.*)|("[^"]*")|\b(int|void|struct|if|else|for|while|return|define|char|NULL)\b|\b(\d+)\b/g,(m,c,s2,k,n)=>c?`<span class="c">${c}</span>`:s2?`<span class="s">${s2}</span>`:k?`<span class="k">${k}</span>`:`<span class="n">${n}</span>`);
+/* ---------- engine (morphing = smooth animation) ---------- */
+const NUM=['cx','cy','x','y','x1','y1','x2','y2','r'];
+function tween(el,a,to){const from=+el.getAttribute(a);if(from===to)return;const t0=performance.now(),k='_t'+a;cancelAnimationFrame(el[k]);(function s(n){const p=Math.min(1,(n-t0)/480),e=1-Math.pow(1-p,3);el.setAttribute(a,from+(to-from)*e);if(p<1)el[k]=requestAnimationFrame(s)})(t0)}
+function patch(o,n){for(const a of [...o.attributes])if(a.name!='class'&&!n.hasAttribute(a.name))o.removeAttribute(a.name);for(const a of n.attributes){if(NUM.includes(a.name)&&o.hasAttribute(a.name))tween(o,a.name,+a.value);else if(o.getAttribute(a.name)!==a.value)o.setAttribute(a.name,a.value)}kids(o,n);const x=o.firstChild,y=n.firstChild;if(x&&y&&x.nodeType==3&&y.nodeType==3&&x.data!==y.data)x.data=y.data}
+function kids(o,n){const nc=[...n.children];if(!nc.length){if(o.textContent!==n.textContent)o.textContent=n.textContent;return}const od=[...o.children],km={},uk=[];od.forEach(c=>c.dataset.k?km[c.dataset.k]=c:uk.push(c));let u=0;const keep=nc.map(c=>{const k=c.dataset.k,m=k?km[k]:uk[u++];if(m&&m.tagName===c.tagName){patch(m,c);return m}c.classList.add('pop');return c});od.forEach(c=>keep.includes(c)||c.remove());keep.forEach((c,i)=>{if(o.children[i]!==c)o.insertBefore(c,o.children[i]||null)})}
+let cur=0,sel=0,fr=[],ix=0,tm=null,spd=1;
+$('#nav').innerHTML=T.map((t,i)=>`<button onclick="show(${i})">${IC[i]} ${t.n.replace(/^\d\s/,'')}</button>`).join('');
+const mt=[[60,14],[30,50],[90,50],[15,86],[45,86],[75,86],[105,86]];
+$('#mini').innerHTML=mt.map((p,i)=>i?`<line x1="${mt[(i-1)>>1][0]}" y1="${mt[(i-1)>>1][1]}" x2="${p[0]}" y2="${p[1]}" class="pop" style="animation-delay:${i*.2}s"/>`:'').join('')+mt.map((p,i)=>`<circle cx="${p[0]}" cy="${p[1]}" r="9" class="pop" style="animation-delay:${i*.2+.12}s"/>`).join('');
+function show(i){cur=i;sel=0;stop();document.querySelectorAll('nav button').forEach((b,j)=>{b.classList.toggle('on',i==j);if(i==j)b.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'})});const t=T[i],x=X[i];
+$('#app').innerHTML=`<section class="card"><h2>📖 เนื้อหา</h2><div class="an">💡 ${x[0]}</div><ul class="nt">${t.notes.map(n=>`<li>${n}</li>`).join('')}</ul><table><tr>${HD.map(h=>`<th>${h}</th>`).join('')}</tr>${x[1].map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</table>${x[2].map(s=>`<div class="tip">⚠️ ${s}</div>`).join('')}</section>
+<section class="card"><h2>🎬 Animation <small style="font-weight:400;color:var(--mut)">เลือกกรณีที่อยากดู</small></h2><div class="chips" id="chips">${A[i].map((a,j)=>`<button class="chip${j?'':' on'}" onclick="pick(${j})">${a[0]}</button>`).join('')}</div><div id="stage"></div><div class="cap fd" id="cap"></div>
+<div class="ctl"><button class="b" onclick="mv(-1)">◀ ก่อนหน้า</button><button class="b p" onclick="mv(1)">ถัดไป ▶</button><button class="b" id="pl" onclick="play()">▶ เล่นอัตโนมัติ</button><select onchange="setSpd(this.value)"><option value="0.6">ช้า</option><option value="1" selected>ปกติ</option><option value="2">เร็ว</option></select></div>
+<div class="ctl"><input type="range" id="sl" min="0" value="0" oninput="ix=+this.value;stop();draw()"><span class="cap" style="min-height:0;padding:2px 10px;margin:0;border:0;background:none" id="ct"></span></div></section>
+<section class="card"><h2>💻 โค้ดภาษา C</h2><pre>${hl(t.code)}</pre></section>
+<section class="card"><h2>📝 แบบทดสอบ <small style="font-weight:400;color:var(--mut)">Level 1–5</small></h2><div id="quiz"></div><div class="ctl"><button class="b p" onclick="grade()">ตรวจคำตอบ</button><button class="b" onclick="quiz()">ล้างคำตอบ</button><b id="score"></b></div></section>`;quiz();load()}
+function quiz(){$('#quiz').innerHTML=T[cur].qs.map((q,k)=>`<div class="q"><span class="tag l">Level ${q[0]}</span><span class="tag">${q[1]}</span><br>${k+1}. ${q[2]}<div style="margin-top:4px">${q[3]?q[3].map((o,j)=>`<label class="opt"><input type="radio" name="q${k}" value="${j}"> ${o}</label>`).join(''):`<input type="text" id="q${k}" placeholder="พิมพ์คำตอบ">`}</div><div class="ex" id="e${k}"></div></div>`).join('');$('#score').textContent=''}
+function pick(j){sel=j;stop();document.querySelectorAll('.chip').forEach((c,k)=>c.classList.toggle('on',k==j));load()}
+function load(){fr=A[cur][sel][1]();ix=0;draw(1)}
+function draw(h){const st=$('#stage'),f=fr[ix];if(h)st.innerHTML=f.h;else{const t=document.createElement('div');t.innerHTML=f.h;kids(st,t)}const c=$('#cap');c.textContent=f.c;c.classList.remove('fd');void c.offsetWidth;c.classList.add('fd');$('#sl').max=fr.length-1;$('#sl').value=ix;$('#ct').textContent=`${ix+1}/${fr.length}`}
+function mv(d){ix=Math.max(0,Math.min(fr.length-1,ix+d));draw()}
+function stop(){clearInterval(tm);tm=null;const p=$('#pl');if(p)p.textContent='▶ เล่นอัตโนมัติ'}
+function play(){if(tm)return stop();if(ix>=fr.length-1){ix=0;draw()}$('#pl').textContent='⏸ หยุด';tm=setInterval(()=>ix<fr.length-1?mv(1):stop(),1400/spd)}
+function setSpd(v){spd=+v;if(tm){stop();play()}}
+document.addEventListener('keydown',e=>{if(/INPUT|SELECT/.test(e.target.tagName))return;if(e.key=='ArrowRight')mv(1);if(e.key=='ArrowLeft')mv(-1)});
+function grade(){let s=0;const t=T[cur];t.qs.forEach((q,k)=>{let ok;if(q[3]){const r=document.querySelector(`input[name=q${k}]:checked`),u=r?+r.value:-1;ok=u==q[4];document.querySelectorAll(`#quiz .q:nth-child(${k+1}) .opt`).forEach((o,j)=>{o.classList.toggle('ok',j==q[4]);o.classList.toggle('no',j==u&&!ok)})}else{ok=$('#q'+k).value.trim().replace(/\s+/g,' ').toLowerCase()==String(q[4]).toLowerCase()}if(ok)s++;$('#e'+k).innerHTML=`<span class="${ok?'good':'bad'}">${ok?'✓ ถูกต้อง':'✗ เฉลย: '+(q[3]?q[3][q[4]]:q[4])}</span> — ${q[5]}`});$('#score').textContent=`🎯 ${s}/${t.qs.length}${s==t.qs.length?' 🎉':''}`}
+show(0);
+</script></main></body></html>
